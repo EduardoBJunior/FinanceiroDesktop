@@ -15,5 +15,11 @@ namespace FinanceiroDesktop
         {
             InitializeComponent();
         }
+
+        private void btn_cadastrar_Click(object sender, EventArgs e)
+        {
+            frmCadastro cadastro = new frmCadastro();
+            cadastro.ShowDialog();
+        }
     }
 }

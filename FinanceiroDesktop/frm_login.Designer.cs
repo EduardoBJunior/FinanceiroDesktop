@@ -36,8 +36,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btn_entrar = new System.Windows.Forms.Button();
-            this.txtb_LoginEmail = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.txtb_LoginEmail = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -53,6 +53,7 @@
             this.btn_cadastrar.TabIndex = 3;
             this.btn_cadastrar.Text = "Cadastrar";
             this.btn_cadastrar.UseVisualStyleBackColor = false;
+            this.btn_cadastrar.Click += new System.EventHandler(this.btn_cadastrar_Click);
             // 
             // label1
             // 
@@ -121,13 +122,6 @@
             this.btn_entrar.Text = "Entrar";
             this.btn_entrar.UseVisualStyleBackColor = false;
             // 
-            // txtb_LoginEmail
-            // 
-            this.txtb_LoginEmail.Location = new System.Drawing.Point(84, 26);
-            this.txtb_LoginEmail.Name = "txtb_LoginEmail";
-            this.txtb_LoginEmail.Size = new System.Drawing.Size(213, 27);
-            this.txtb_LoginEmail.TabIndex = 0;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -136,6 +130,13 @@
             this.label2.Size = new System.Drawing.Size(59, 19);
             this.label2.TabIndex = 1;
             this.label2.Text = "E-mail :";
+            // 
+            // txtb_LoginEmail
+            // 
+            this.txtb_LoginEmail.Location = new System.Drawing.Point(84, 26);
+            this.txtb_LoginEmail.Name = "txtb_LoginEmail";
+            this.txtb_LoginEmail.Size = new System.Drawing.Size(213, 27);
+            this.txtb_LoginEmail.TabIndex = 0;
             // 
             // frm_login
             // 
