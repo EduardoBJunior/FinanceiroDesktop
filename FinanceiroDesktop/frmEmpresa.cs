@@ -9,16 +9,11 @@ using System.Windows.Forms;
 
 namespace FinanceiroDesktop
 {
-    public partial class frmCadastro : Form
+    public partial class frmEmpresa : Form
     {
-        public frmCadastro()
+        public frmEmpresa()
         {
             InitializeComponent();
-        }
-
-        private void frmCadastro_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

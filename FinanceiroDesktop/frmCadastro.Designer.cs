@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textb_nome = new System.Windows.Forms.TextBox();
-            this.tatb_Email = new System.Windows.Forms.TextBox();
-            this.txtb_Senha = new System.Windows.Forms.TextBox();
-            this.txtb_RepetirSenha = new System.Windows.Forms.TextBox();
             this.btn_entrar = new System.Windows.Forms.Button();
+            this.txtb_RepetirSenha = new System.Windows.Forms.TextBox();
+            this.txtb_Senha = new System.Windows.Forms.TextBox();
+            this.tatb_Email = new System.Windows.Forms.TextBox();
+            this.textb_nome = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,72 +60,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Faça seu Cadastro";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(81, 39);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 18);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Nome :";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(80, 75);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 18);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "E-mail :";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(82, 111);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 18);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Senha :";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(29, 147);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(109, 18);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Repetir Senha :";
-            // 
-            // textb_nome
-            // 
-            this.textb_nome.Location = new System.Drawing.Point(145, 39);
-            this.textb_nome.Name = "textb_nome";
-            this.textb_nome.Size = new System.Drawing.Size(239, 24);
-            this.textb_nome.TabIndex = 0;
-            // 
-            // tatb_Email
-            // 
-            this.tatb_Email.Location = new System.Drawing.Point(144, 74);
-            this.tatb_Email.Name = "tatb_Email";
-            this.tatb_Email.Size = new System.Drawing.Size(239, 24);
-            this.tatb_Email.TabIndex = 1;
-            // 
-            // txtb_Senha
-            // 
-            this.txtb_Senha.Location = new System.Drawing.Point(144, 109);
-            this.txtb_Senha.Name = "txtb_Senha";
-            this.txtb_Senha.PasswordChar = '*';
-            this.txtb_Senha.Size = new System.Drawing.Size(133, 24);
-            this.txtb_Senha.TabIndex = 2;
-            // 
-            // txtb_RepetirSenha
-            // 
-            this.txtb_RepetirSenha.Location = new System.Drawing.Point(144, 144);
-            this.txtb_RepetirSenha.Name = "txtb_RepetirSenha";
-            this.txtb_RepetirSenha.PasswordChar = '*';
-            this.txtb_RepetirSenha.Size = new System.Drawing.Size(133, 24);
-            this.txtb_RepetirSenha.TabIndex = 3;
-            // 
             // btn_entrar
             // 
             this.btn_entrar.BackColor = System.Drawing.Color.LimeGreen;
@@ -139,6 +73,72 @@
             this.btn_entrar.Text = "Finalizar";
             this.btn_entrar.UseVisualStyleBackColor = false;
             // 
+            // txtb_RepetirSenha
+            // 
+            this.txtb_RepetirSenha.Location = new System.Drawing.Point(144, 144);
+            this.txtb_RepetirSenha.Name = "txtb_RepetirSenha";
+            this.txtb_RepetirSenha.PasswordChar = '*';
+            this.txtb_RepetirSenha.Size = new System.Drawing.Size(133, 24);
+            this.txtb_RepetirSenha.TabIndex = 3;
+            // 
+            // txtb_Senha
+            // 
+            this.txtb_Senha.Location = new System.Drawing.Point(144, 109);
+            this.txtb_Senha.Name = "txtb_Senha";
+            this.txtb_Senha.PasswordChar = '*';
+            this.txtb_Senha.Size = new System.Drawing.Size(133, 24);
+            this.txtb_Senha.TabIndex = 2;
+            // 
+            // tatb_Email
+            // 
+            this.tatb_Email.Location = new System.Drawing.Point(144, 74);
+            this.tatb_Email.Name = "tatb_Email";
+            this.tatb_Email.Size = new System.Drawing.Size(239, 24);
+            this.tatb_Email.TabIndex = 1;
+            // 
+            // textb_nome
+            // 
+            this.textb_nome.Location = new System.Drawing.Point(145, 39);
+            this.textb_nome.Name = "textb_nome";
+            this.textb_nome.Size = new System.Drawing.Size(239, 24);
+            this.textb_nome.TabIndex = 0;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(29, 147);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(109, 18);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Repetir Senha :";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(82, 111);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(56, 18);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Senha :";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(80, 75);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(58, 18);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "E-mail :";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(81, 39);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(57, 18);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Nome :";
+            // 
             // frmCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -148,6 +148,7 @@
             this.Name = "frmCadastro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Financeiro : Cadastro";
+            this.Load += new System.EventHandler(this.frmCadastro_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

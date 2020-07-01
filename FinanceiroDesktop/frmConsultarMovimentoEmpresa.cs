@@ -9,14 +9,14 @@ using System.Windows.Forms;
 
 namespace FinanceiroDesktop
 {
-    public partial class frmCadastro : Form
+    public partial class frmConsultarMovimentoEmpresa : Form
     {
-        public frmCadastro()
+        public frmConsultarMovimentoEmpresa()
         {
             InitializeComponent();
         }
 
-        private void frmCadastro_Load(object sender, EventArgs e)
+        private void groupBox2_Enter(object sender, EventArgs e)
         {
 
         }
