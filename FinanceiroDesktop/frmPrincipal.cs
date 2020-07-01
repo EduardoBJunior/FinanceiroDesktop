@@ -50,5 +50,17 @@ namespace FinanceiroDesktop
         {
             Application.Exit();
         }
+
+        private void porCategoriaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConsultarCategoria frm = new frmConsultarCategoria();
+            frm.ShowDialog();
+        }
+
+        private void porContaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConsultarConta frm = new frmConsultarConta();
+            frm.ShowDialog();
+        }
     }
 }

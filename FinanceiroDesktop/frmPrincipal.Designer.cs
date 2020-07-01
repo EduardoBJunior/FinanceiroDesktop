@@ -110,12 +110,14 @@
             this.porCategoriaToolStripMenuItem.Name = "porCategoriaToolStripMenuItem";
             this.porCategoriaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.porCategoriaToolStripMenuItem.Text = "Por Categoria";
+            this.porCategoriaToolStripMenuItem.Click += new System.EventHandler(this.porCategoriaToolStripMenuItem_Click);
             // 
             // porContaToolStripMenuItem
             // 
             this.porContaToolStripMenuItem.Name = "porContaToolStripMenuItem";
             this.porContaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.porContaToolStripMenuItem.Text = "Por Conta";
+            this.porContaToolStripMenuItem.Click += new System.EventHandler(this.porContaToolStripMenuItem_Click);
             // 
             // sairToolStripMenuItem
             // 
