@@ -29,31 +29,31 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_login));
-            this.btn_cadastrar = new System.Windows.Forms.Button();
+            this.btnCadastrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.lbLinkRecSenha = new System.Windows.Forms.LinkLabel();
             this.txtb_LoginSenha = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btn_entrar = new System.Windows.Forms.Button();
+            this.btnEntrar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txtb_LoginEmail = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btn_cadastrar
+            // btnCadastrar
             // 
-            this.btn_cadastrar.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btn_cadastrar.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cadastrar.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.btn_cadastrar.Location = new System.Drawing.Point(96, 120);
-            this.btn_cadastrar.Name = "btn_cadastrar";
-            this.btn_cadastrar.Size = new System.Drawing.Size(103, 42);
-            this.btn_cadastrar.TabIndex = 3;
-            this.btn_cadastrar.Text = "Cadastrar";
-            this.btn_cadastrar.UseVisualStyleBackColor = false;
-            this.btn_cadastrar.Click += new System.EventHandler(this.btn_cadastrar_Click);
+            this.btnCadastrar.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrar.ForeColor = System.Drawing.SystemColors.InactiveBorder;
+            this.btnCadastrar.Location = new System.Drawing.Point(96, 120);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(103, 42);
+            this.btnCadastrar.TabIndex = 3;
+            this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnCadastrar.Click += new System.EventHandler(this.btn_cadastrar_Click);
             // 
             // label1
             // 
@@ -64,15 +64,15 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Senha :";
             // 
-            // linkLabel1
+            // lbLinkRecSenha
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(174, 83);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(120, 19);
-            this.linkLabel1.TabIndex = 2;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Recuperar Senha";
+            this.lbLinkRecSenha.AutoSize = true;
+            this.lbLinkRecSenha.Location = new System.Drawing.Point(174, 83);
+            this.lbLinkRecSenha.Name = "lbLinkRecSenha";
+            this.lbLinkRecSenha.Size = new System.Drawing.Size(120, 19);
+            this.lbLinkRecSenha.TabIndex = 2;
+            this.lbLinkRecSenha.TabStop = true;
+            this.lbLinkRecSenha.Text = "Recuperar Senha";
             // 
             // txtb_LoginSenha
             // 
@@ -94,11 +94,11 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btn_entrar);
-            this.groupBox1.Controls.Add(this.btn_cadastrar);
+            this.groupBox1.Controls.Add(this.btnEntrar);
+            this.groupBox1.Controls.Add(this.btnCadastrar);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.linkLabel1);
+            this.groupBox1.Controls.Add(this.lbLinkRecSenha);
             this.groupBox1.Controls.Add(this.txtb_LoginEmail);
             this.groupBox1.Controls.Add(this.txtb_LoginSenha);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -109,18 +109,19 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Login";
             // 
-            // btn_entrar
+            // btnEntrar
             // 
-            this.btn_entrar.BackColor = System.Drawing.Color.LimeGreen;
-            this.btn_entrar.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_entrar.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.btn_entrar.Location = new System.Drawing.Point(205, 120);
-            this.btn_entrar.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_entrar.Name = "btn_entrar";
-            this.btn_entrar.Size = new System.Drawing.Size(101, 42);
-            this.btn_entrar.TabIndex = 2;
-            this.btn_entrar.Text = "Entrar";
-            this.btn_entrar.UseVisualStyleBackColor = false;
+            this.btnEntrar.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnEntrar.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEntrar.ForeColor = System.Drawing.SystemColors.InactiveBorder;
+            this.btnEntrar.Location = new System.Drawing.Point(205, 120);
+            this.btnEntrar.Margin = new System.Windows.Forms.Padding(0);
+            this.btnEntrar.Name = "btnEntrar";
+            this.btnEntrar.Size = new System.Drawing.Size(101, 42);
+            this.btnEntrar.TabIndex = 2;
+            this.btnEntrar.Text = "Entrar";
+            this.btnEntrar.UseVisualStyleBackColor = false;
+            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
             // label2
             // 
@@ -158,13 +159,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btn_cadastrar;
+        private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel lbLinkRecSenha;
         private System.Windows.Forms.TextBox txtb_LoginSenha;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btn_entrar;
+        private System.Windows.Forms.Button btnEntrar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtb_LoginEmail;
     }

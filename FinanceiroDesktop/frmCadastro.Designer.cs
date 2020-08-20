@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btn_entrar = new System.Windows.Forms.Button();
-            this.txtb_RepetirSenha = new System.Windows.Forms.TextBox();
-            this.txtb_Senha = new System.Windows.Forms.TextBox();
-            this.tatb_Email = new System.Windows.Forms.TextBox();
-            this.textb_nome = new System.Windows.Forms.TextBox();
+            this.btnFinalizar = new System.Windows.Forms.Button();
+            this.txtRepetirSenha = new System.Windows.Forms.TextBox();
+            this.txtSenha = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,11 +43,11 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btn_entrar);
-            this.groupBox1.Controls.Add(this.txtb_RepetirSenha);
-            this.groupBox1.Controls.Add(this.txtb_Senha);
-            this.groupBox1.Controls.Add(this.tatb_Email);
-            this.groupBox1.Controls.Add(this.textb_nome);
+            this.groupBox1.Controls.Add(this.btnFinalizar);
+            this.groupBox1.Controls.Add(this.txtRepetirSenha);
+            this.groupBox1.Controls.Add(this.txtSenha);
+            this.groupBox1.Controls.Add(this.txtEmail);
+            this.groupBox1.Controls.Add(this.txtNome);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
@@ -60,48 +60,49 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Faça seu Cadastro";
             // 
-            // btn_entrar
+            // btnFinalizar
             // 
-            this.btn_entrar.BackColor = System.Drawing.Color.LimeGreen;
-            this.btn_entrar.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_entrar.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.btn_entrar.Location = new System.Drawing.Point(283, 214);
-            this.btn_entrar.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_entrar.Name = "btn_entrar";
-            this.btn_entrar.Size = new System.Drawing.Size(101, 42);
-            this.btn_entrar.TabIndex = 4;
-            this.btn_entrar.Text = "Finalizar";
-            this.btn_entrar.UseVisualStyleBackColor = false;
+            this.btnFinalizar.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnFinalizar.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFinalizar.ForeColor = System.Drawing.SystemColors.InactiveBorder;
+            this.btnFinalizar.Location = new System.Drawing.Point(283, 214);
+            this.btnFinalizar.Margin = new System.Windows.Forms.Padding(0);
+            this.btnFinalizar.Name = "btnFinalizar";
+            this.btnFinalizar.Size = new System.Drawing.Size(101, 42);
+            this.btnFinalizar.TabIndex = 4;
+            this.btnFinalizar.Text = "Finalizar";
+            this.btnFinalizar.UseVisualStyleBackColor = false;
+            this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click);
             // 
-            // txtb_RepetirSenha
+            // txtRepetirSenha
             // 
-            this.txtb_RepetirSenha.Location = new System.Drawing.Point(144, 144);
-            this.txtb_RepetirSenha.Name = "txtb_RepetirSenha";
-            this.txtb_RepetirSenha.PasswordChar = '*';
-            this.txtb_RepetirSenha.Size = new System.Drawing.Size(133, 24);
-            this.txtb_RepetirSenha.TabIndex = 3;
+            this.txtRepetirSenha.Location = new System.Drawing.Point(144, 144);
+            this.txtRepetirSenha.Name = "txtRepetirSenha";
+            this.txtRepetirSenha.PasswordChar = '*';
+            this.txtRepetirSenha.Size = new System.Drawing.Size(133, 24);
+            this.txtRepetirSenha.TabIndex = 3;
             // 
-            // txtb_Senha
+            // txtSenha
             // 
-            this.txtb_Senha.Location = new System.Drawing.Point(144, 109);
-            this.txtb_Senha.Name = "txtb_Senha";
-            this.txtb_Senha.PasswordChar = '*';
-            this.txtb_Senha.Size = new System.Drawing.Size(133, 24);
-            this.txtb_Senha.TabIndex = 2;
+            this.txtSenha.Location = new System.Drawing.Point(144, 109);
+            this.txtSenha.Name = "txtSenha";
+            this.txtSenha.PasswordChar = '*';
+            this.txtSenha.Size = new System.Drawing.Size(133, 24);
+            this.txtSenha.TabIndex = 2;
             // 
-            // tatb_Email
+            // txtEmail
             // 
-            this.tatb_Email.Location = new System.Drawing.Point(144, 74);
-            this.tatb_Email.Name = "tatb_Email";
-            this.tatb_Email.Size = new System.Drawing.Size(239, 24);
-            this.tatb_Email.TabIndex = 1;
+            this.txtEmail.Location = new System.Drawing.Point(144, 74);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(239, 24);
+            this.txtEmail.TabIndex = 1;
             // 
-            // textb_nome
+            // txtNome
             // 
-            this.textb_nome.Location = new System.Drawing.Point(145, 39);
-            this.textb_nome.Name = "textb_nome";
-            this.textb_nome.Size = new System.Drawing.Size(239, 24);
-            this.textb_nome.TabIndex = 0;
+            this.txtNome.Location = new System.Drawing.Point(145, 39);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(239, 24);
+            this.txtNome.TabIndex = 0;
             // 
             // label4
             // 
@@ -158,14 +159,14 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtb_RepetirSenha;
-        private System.Windows.Forms.TextBox txtb_Senha;
-        private System.Windows.Forms.TextBox tatb_Email;
-        private System.Windows.Forms.TextBox textb_nome;
+        private System.Windows.Forms.TextBox txtRepetirSenha;
+        private System.Windows.Forms.TextBox txtSenha;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btn_entrar;
+        private System.Windows.Forms.Button btnFinalizar;
     }
 }

@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btn_Excluir = new System.Windows.Forms.Button();
-            this.btn_cancelar = new System.Windows.Forms.Button();
-            this.btn_salvar = new System.Windows.Forms.Button();
-            this.txb_nome = new System.Windows.Forms.TextBox();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnSalvar = new System.Windows.Forms.Button();
+            this.txtNome = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.DGV_Categorias = new System.Windows.Forms.DataGridView();
-            this.txtb_codigo = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Categorias)).BeginInit();
@@ -44,11 +44,11 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtb_codigo);
-            this.groupBox1.Controls.Add(this.btn_Excluir);
-            this.groupBox1.Controls.Add(this.btn_cancelar);
-            this.groupBox1.Controls.Add(this.btn_salvar);
-            this.groupBox1.Controls.Add(this.txb_nome);
+            this.groupBox1.Controls.Add(this.txtCodigo);
+            this.groupBox1.Controls.Add(this.btnExcluir);
+            this.groupBox1.Controls.Add(this.btnCancelar);
+            this.groupBox1.Controls.Add(this.btnSalvar);
+            this.groupBox1.Controls.Add(this.txtNome);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 3);
@@ -58,51 +58,62 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Categorias";
             // 
-            // btn_Excluir
+            // txtCodigo
             // 
-            this.btn_Excluir.BackColor = System.Drawing.Color.Crimson;
-            this.btn_Excluir.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Excluir.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.btn_Excluir.Location = new System.Drawing.Point(92, 73);
-            this.btn_Excluir.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_Excluir.Name = "btn_Excluir";
-            this.btn_Excluir.Size = new System.Drawing.Size(101, 42);
-            this.btn_Excluir.TabIndex = 7;
-            this.btn_Excluir.Text = "Excluir";
-            this.btn_Excluir.UseVisualStyleBackColor = false;
+            this.txtCodigo.Location = new System.Drawing.Point(64, 14);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(52, 24);
+            this.txtCodigo.TabIndex = 8;
+            this.txtCodigo.Visible = false;
             // 
-            // btn_cancelar
+            // btnExcluir
             // 
-            this.btn_cancelar.BackColor = System.Drawing.Color.DarkOrange;
-            this.btn_cancelar.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cancelar.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.btn_cancelar.Location = new System.Drawing.Point(204, 73);
-            this.btn_cancelar.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_cancelar.Name = "btn_cancelar";
-            this.btn_cancelar.Size = new System.Drawing.Size(101, 42);
-            this.btn_cancelar.TabIndex = 6;
-            this.btn_cancelar.Text = "Cancelar";
-            this.btn_cancelar.UseVisualStyleBackColor = false;
+            this.btnExcluir.BackColor = System.Drawing.Color.Crimson;
+            this.btnExcluir.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluir.ForeColor = System.Drawing.SystemColors.InactiveBorder;
+            this.btnExcluir.Location = new System.Drawing.Point(92, 73);
+            this.btnExcluir.Margin = new System.Windows.Forms.Padding(0);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(101, 42);
+            this.btnExcluir.TabIndex = 7;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
-            // btn_salvar
+            // btnCancelar
             // 
-            this.btn_salvar.BackColor = System.Drawing.Color.LimeGreen;
-            this.btn_salvar.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_salvar.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.btn_salvar.Location = new System.Drawing.Point(316, 73);
-            this.btn_salvar.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_salvar.Name = "btn_salvar";
-            this.btn_salvar.Size = new System.Drawing.Size(101, 42);
-            this.btn_salvar.TabIndex = 5;
-            this.btn_salvar.Text = "Salvar";
-            this.btn_salvar.UseVisualStyleBackColor = false;
+            this.btnCancelar.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.SystemColors.InactiveBorder;
+            this.btnCancelar.Location = new System.Drawing.Point(204, 73);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(0);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(101, 42);
+            this.btnCancelar.TabIndex = 6;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // txb_nome
+            // btnSalvar
             // 
-            this.txb_nome.Location = new System.Drawing.Point(64, 40);
-            this.txb_nome.Name = "txb_nome";
-            this.txb_nome.Size = new System.Drawing.Size(354, 24);
-            this.txb_nome.TabIndex = 0;
+            this.btnSalvar.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnSalvar.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvar.ForeColor = System.Drawing.SystemColors.InactiveBorder;
+            this.btnSalvar.Location = new System.Drawing.Point(316, 73);
+            this.btnSalvar.Margin = new System.Windows.Forms.Padding(0);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(101, 42);
+            this.btnSalvar.TabIndex = 5;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            // 
+            // txtNome
+            // 
+            this.txtNome.Location = new System.Drawing.Point(64, 40);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(354, 24);
+            this.txtNome.TabIndex = 0;
             // 
             // label1
             // 
@@ -133,14 +144,6 @@
             this.DGV_Categorias.Size = new System.Drawing.Size(409, 186);
             this.DGV_Categorias.TabIndex = 0;
             // 
-            // txtb_codigo
-            // 
-            this.txtb_codigo.Location = new System.Drawing.Point(64, 14);
-            this.txtb_codigo.Name = "txtb_codigo";
-            this.txtb_codigo.Size = new System.Drawing.Size(52, 24);
-            this.txtb_codigo.TabIndex = 8;
-            this.txtb_codigo.Visible = false;
-            // 
             // frmCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -152,6 +155,7 @@
             this.Name = "frmCategoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gerenciar Categoria";
+            this.Load += new System.EventHandler(this.frmCategoria_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -163,13 +167,13 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txb_nome;
+        private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button btn_Excluir;
-        private System.Windows.Forms.Button btn_cancelar;
-        private System.Windows.Forms.Button btn_salvar;
+        private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.DataGridView DGV_Categorias;
-        private System.Windows.Forms.TextBox txtb_codigo;
+        private System.Windows.Forms.TextBox txtCodigo;
     }
 }

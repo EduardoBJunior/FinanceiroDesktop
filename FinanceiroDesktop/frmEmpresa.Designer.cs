@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             this.gb_gerEmpresa = new System.Windows.Forms.GroupBox();
+            this.txtb_codigo = new System.Windows.Forms.TextBox();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnSalvar = new System.Windows.Forms.Button();
+            this.txtb_site = new System.Windows.Forms.TextBox();
+            this.txtb_endereco = new System.Windows.Forms.TextBox();
+            this.txtb_telefone = new System.Windows.Forms.MaskedTextBox();
+            this.txtb_nomeEmpresa = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtb_nomeEmpresa = new System.Windows.Forms.TextBox();
-            this.txtb_telefone = new System.Windows.Forms.MaskedTextBox();
-            this.txtb_endereco = new System.Windows.Forms.TextBox();
-            this.txtb_site = new System.Windows.Forms.TextBox();
-            this.txtb_codigo = new System.Windows.Forms.TextBox();
-            this.btn_Excluir = new System.Windows.Forms.Button();
-            this.btn_cancelar = new System.Windows.Forms.Button();
-            this.btn_salvar = new System.Windows.Forms.Button();
             this.DGV_Empresas = new System.Windows.Forms.DataGridView();
             this.gb_gerEmpresa.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -51,9 +51,9 @@
             // gb_gerEmpresa
             // 
             this.gb_gerEmpresa.Controls.Add(this.txtb_codigo);
-            this.gb_gerEmpresa.Controls.Add(this.btn_Excluir);
-            this.gb_gerEmpresa.Controls.Add(this.btn_cancelar);
-            this.gb_gerEmpresa.Controls.Add(this.btn_salvar);
+            this.gb_gerEmpresa.Controls.Add(this.btnExcluir);
+            this.gb_gerEmpresa.Controls.Add(this.btnCancelar);
+            this.gb_gerEmpresa.Controls.Add(this.btnSalvar);
             this.gb_gerEmpresa.Controls.Add(this.txtb_site);
             this.gb_gerEmpresa.Controls.Add(this.txtb_endereco);
             this.gb_gerEmpresa.Controls.Add(this.txtb_telefone);
@@ -69,6 +69,86 @@
             this.gb_gerEmpresa.TabIndex = 0;
             this.gb_gerEmpresa.TabStop = false;
             this.gb_gerEmpresa.Text = "Gerenciar Empresa";
+            // 
+            // txtb_codigo
+            // 
+            this.txtb_codigo.Location = new System.Drawing.Point(84, 18);
+            this.txtb_codigo.Name = "txtb_codigo";
+            this.txtb_codigo.Size = new System.Drawing.Size(52, 24);
+            this.txtb_codigo.TabIndex = 12;
+            this.txtb_codigo.Visible = false;
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.BackColor = System.Drawing.Color.Crimson;
+            this.btnExcluir.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluir.ForeColor = System.Drawing.SystemColors.InactiveBorder;
+            this.btnExcluir.Location = new System.Drawing.Point(120, 177);
+            this.btnExcluir.Margin = new System.Windows.Forms.Padding(0);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(101, 42);
+            this.btnExcluir.TabIndex = 11;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.SystemColors.InactiveBorder;
+            this.btnCancelar.Location = new System.Drawing.Point(232, 177);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(0);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(101, 42);
+            this.btnCancelar.TabIndex = 10;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnSalvar.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvar.ForeColor = System.Drawing.SystemColors.InactiveBorder;
+            this.btnSalvar.Location = new System.Drawing.Point(344, 177);
+            this.btnSalvar.Margin = new System.Windows.Forms.Padding(0);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(101, 42);
+            this.btnSalvar.TabIndex = 9;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            // 
+            // txtb_site
+            // 
+            this.txtb_site.Location = new System.Drawing.Point(83, 150);
+            this.txtb_site.Name = "txtb_site";
+            this.txtb_site.Size = new System.Drawing.Size(270, 24);
+            this.txtb_site.TabIndex = 1;
+            // 
+            // txtb_endereco
+            // 
+            this.txtb_endereco.Location = new System.Drawing.Point(83, 116);
+            this.txtb_endereco.Name = "txtb_endereco";
+            this.txtb_endereco.Size = new System.Drawing.Size(270, 24);
+            this.txtb_endereco.TabIndex = 1;
+            // 
+            // txtb_telefone
+            // 
+            this.txtb_telefone.Location = new System.Drawing.Point(83, 82);
+            this.txtb_telefone.Mask = "(99) 000000000";
+            this.txtb_telefone.Name = "txtb_telefone";
+            this.txtb_telefone.Size = new System.Drawing.Size(97, 24);
+            this.txtb_telefone.TabIndex = 2;
+            this.txtb_telefone.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            // 
+            // txtb_nomeEmpresa
+            // 
+            this.txtb_nomeEmpresa.Location = new System.Drawing.Point(84, 48);
+            this.txtb_nomeEmpresa.Name = "txtb_nomeEmpresa";
+            this.txtb_nomeEmpresa.Size = new System.Drawing.Size(270, 24);
+            this.txtb_nomeEmpresa.TabIndex = 1;
             // 
             // label4
             // 
@@ -117,83 +197,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Empresas Cadastradas";
             // 
-            // txtb_nomeEmpresa
-            // 
-            this.txtb_nomeEmpresa.Location = new System.Drawing.Point(84, 48);
-            this.txtb_nomeEmpresa.Name = "txtb_nomeEmpresa";
-            this.txtb_nomeEmpresa.Size = new System.Drawing.Size(270, 24);
-            this.txtb_nomeEmpresa.TabIndex = 1;
-            // 
-            // txtb_telefone
-            // 
-            this.txtb_telefone.Location = new System.Drawing.Point(83, 82);
-            this.txtb_telefone.Mask = "(99) 000000000";
-            this.txtb_telefone.Name = "txtb_telefone";
-            this.txtb_telefone.Size = new System.Drawing.Size(97, 24);
-            this.txtb_telefone.TabIndex = 2;
-            this.txtb_telefone.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-            // 
-            // txtb_endereco
-            // 
-            this.txtb_endereco.Location = new System.Drawing.Point(83, 116);
-            this.txtb_endereco.Name = "txtb_endereco";
-            this.txtb_endereco.Size = new System.Drawing.Size(270, 24);
-            this.txtb_endereco.TabIndex = 1;
-            // 
-            // txtb_site
-            // 
-            this.txtb_site.Location = new System.Drawing.Point(83, 150);
-            this.txtb_site.Name = "txtb_site";
-            this.txtb_site.Size = new System.Drawing.Size(270, 24);
-            this.txtb_site.TabIndex = 1;
-            // 
-            // txtb_codigo
-            // 
-            this.txtb_codigo.Location = new System.Drawing.Point(84, 18);
-            this.txtb_codigo.Name = "txtb_codigo";
-            this.txtb_codigo.Size = new System.Drawing.Size(52, 24);
-            this.txtb_codigo.TabIndex = 12;
-            this.txtb_codigo.Visible = false;
-            // 
-            // btn_Excluir
-            // 
-            this.btn_Excluir.BackColor = System.Drawing.Color.Crimson;
-            this.btn_Excluir.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Excluir.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.btn_Excluir.Location = new System.Drawing.Point(120, 177);
-            this.btn_Excluir.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_Excluir.Name = "btn_Excluir";
-            this.btn_Excluir.Size = new System.Drawing.Size(101, 42);
-            this.btn_Excluir.TabIndex = 11;
-            this.btn_Excluir.Text = "Excluir";
-            this.btn_Excluir.UseVisualStyleBackColor = false;
-            // 
-            // btn_cancelar
-            // 
-            this.btn_cancelar.BackColor = System.Drawing.Color.DarkOrange;
-            this.btn_cancelar.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cancelar.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.btn_cancelar.Location = new System.Drawing.Point(232, 177);
-            this.btn_cancelar.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_cancelar.Name = "btn_cancelar";
-            this.btn_cancelar.Size = new System.Drawing.Size(101, 42);
-            this.btn_cancelar.TabIndex = 10;
-            this.btn_cancelar.Text = "Cancelar";
-            this.btn_cancelar.UseVisualStyleBackColor = false;
-            // 
-            // btn_salvar
-            // 
-            this.btn_salvar.BackColor = System.Drawing.Color.LimeGreen;
-            this.btn_salvar.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_salvar.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.btn_salvar.Location = new System.Drawing.Point(344, 177);
-            this.btn_salvar.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_salvar.Name = "btn_salvar";
-            this.btn_salvar.Size = new System.Drawing.Size(101, 42);
-            this.btn_salvar.TabIndex = 9;
-            this.btn_salvar.Text = "Salvar";
-            this.btn_salvar.UseVisualStyleBackColor = false;
-            // 
             // DGV_Empresas
             // 
             this.DGV_Empresas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -201,6 +204,7 @@
             this.DGV_Empresas.Name = "DGV_Empresas";
             this.DGV_Empresas.Size = new System.Drawing.Size(453, 263);
             this.DGV_Empresas.TabIndex = 0;
+            this.DGV_Empresas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Empresas_CellContentClick);
             // 
             // frmEmpresa
             // 
@@ -213,6 +217,7 @@
             this.Name = "frmEmpresa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gerenciar Empresa";
+            this.Load += new System.EventHandler(this.frmEmpresa_Load);
             this.gb_gerEmpresa.ResumeLayout(false);
             this.gb_gerEmpresa.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -234,9 +239,9 @@
         private System.Windows.Forms.MaskedTextBox txtb_telefone;
         private System.Windows.Forms.TextBox txtb_nomeEmpresa;
         private System.Windows.Forms.TextBox txtb_codigo;
-        private System.Windows.Forms.Button btn_Excluir;
-        private System.Windows.Forms.Button btn_cancelar;
-        private System.Windows.Forms.Button btn_salvar;
+        private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.DataGridView DGV_Empresas;
     }
 }

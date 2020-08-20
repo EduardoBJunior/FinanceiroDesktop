@@ -37,10 +37,10 @@ namespace ListaFuncao
 
             
             lbResMouse.Text = Convert.ToString(totalm = CalcularTotalItem(mouse,qtd1));
-            lbResTec.Text = Convert.ToString(totalt = CalcularTotalItem(teclado,qtd1));
-            lbResDell.Text = Convert.ToString(totald = CalcularTotalItem(dell,qtd1));
-            lbResAcer.Text = Convert.ToString(totala = CalcularTotalItem(acer,qtd1));
-            lbResPC.Text = Convert.ToString(totalp = CalcularTotalItem(pc,qtd1));
+            lbResTec.Text = Convert.ToString(totalt = CalcularTotalItem(teclado,qtd2));
+            lbResDell.Text = Convert.ToString(totald = CalcularTotalItem(dell,qtd3));
+            lbResAcer.Text = Convert.ToString(totala = CalcularTotalItem(acer,qtd4));
+            lbResPC.Text = Convert.ToString(totalp = CalcularTotalItem(pc,qtd5));
 
 
             lbTotalGeral.Text = Convert.ToString(CalcularTotal(totalm,totalt,totald,totala,totalp));

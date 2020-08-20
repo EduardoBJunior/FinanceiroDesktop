@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{70E62CE3-FA0F-4EA4-AE49-B98A836891D7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ListasGenericas</RootNamespace>
+    <AssemblyName>ListasGenericas</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCalcularMedia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCalcularMedia.Designer.cs">
+      <DependentUpon>frmCalcularMedia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEntradaSaida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEntradaSaida.Designer.cs">
+      <DependentUpon>frmEntradaSaida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEx2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEx2.Designer.cs">
+      <DependentUpon>frmEx2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEx3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEx3.Designer.cs">
+      <DependentUpon>frmEx3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEX5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEX5.Designer.cs">
+      <DependentUpon>frmEX5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmList1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmList1.Designer.cs">
+      <DependentUpon>frmList1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSalario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSalario.Designer.cs">
+      <DependentUpon>frmSalario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCalcularMedia.resx">
+      <DependentUpon>frmCalcularMedia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEntradaSaida.resx">
+      <DependentUpon>frmEntradaSaida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEx2.resx">
+      <DependentUpon>frmEx2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEx3.resx">
+      <DependentUpon>frmEx3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEX5.resx">
+      <DependentUpon>frmEX5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmList1.resx">
+      <DependentUpon>frmList1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSalario.resx">
+      <DependentUpon>frmSalario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
