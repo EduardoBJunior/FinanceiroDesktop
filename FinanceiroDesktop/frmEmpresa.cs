@@ -24,7 +24,7 @@ namespace FinanceiroDesktop
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-
+            VerificarCampos();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -42,6 +42,44 @@ namespace FinanceiroDesktop
 
         }
 
-        private bool Verificar
+        private bool VerificarCampos()
+        {
+            bool ret = false;
+            string campos = "";
+
+            //if (txtCodigo.Text.Trim() =="")
+            //{
+            //    ret = false;
+            //    campos += " - Código.\n";
+            //}
+            if (txtb_nomeEmpresa.Text.Trim() =="")
+            {
+                ret = false;
+                campos +=" - Nome.\n";
+            }
+            if (txtb_telefone.Text.Trim() =="")
+            {
+                ret = false;
+                campos += " - Telefone.\n";
+            }
+            if (txtb_endereco.Text.Trim() =="")
+            {
+                ret = false;
+                campos += " - Endereço. \n";
+            }
+            if (txtb_site.Text.Trim()=="")
+            {
+                ret = false;
+                campos += " - Site.";
+            }
+
+            if (!ret)
+            {
+                Util.ExibirMsg(campos);
+            }
+
+
+            return ret;
+        }
     }
 }

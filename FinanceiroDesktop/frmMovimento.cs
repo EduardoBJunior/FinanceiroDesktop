@@ -15,5 +15,25 @@ namespace FinanceiroDesktop
         {
             InitializeComponent();
         }
+
+        private void frmMovimento_Load(object sender, EventArgs e)
+        {
+            Util.EstadoBotao(Util.EstadoTela.Novo, Button btn_salvar);
+        }
+
+        private void btn_salvar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_cancelar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Excluir_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

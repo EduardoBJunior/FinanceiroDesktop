@@ -107,6 +107,7 @@
             this.btn_Excluir.TabIndex = 11;
             this.btn_Excluir.Text = "Excluir";
             this.btn_Excluir.UseVisualStyleBackColor = false;
+            this.btn_Excluir.Click += new System.EventHandler(this.btn_Excluir_Click);
             // 
             // btn_cancelar
             // 
@@ -120,6 +121,7 @@
             this.btn_cancelar.TabIndex = 10;
             this.btn_cancelar.Text = "Cancelar";
             this.btn_cancelar.UseVisualStyleBackColor = false;
+            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
             // btn_salvar
             // 
@@ -133,6 +135,7 @@
             this.btn_salvar.TabIndex = 9;
             this.btn_salvar.Text = "Salvar";
             this.btn_salvar.UseVisualStyleBackColor = false;
+            this.btn_salvar.Click += new System.EventHandler(this.btn_salvar_Click);
             // 
             // txtb_Saldo
             // 
@@ -235,6 +238,7 @@
             this.Name = "frmConta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmConta";
+            this.Load += new System.EventHandler(this.frmConta_Load);
             this.gb_CadConta.ResumeLayout(false);
             this.gb_CadConta.PerformLayout();
             this.groupBox1.ResumeLayout(false);

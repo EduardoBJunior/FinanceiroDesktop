@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.gb_gerEmpresa = new System.Windows.Forms.GroupBox();
-            this.txtb_codigo = new System.Windows.Forms.TextBox();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
@@ -50,7 +50,7 @@
             // 
             // gb_gerEmpresa
             // 
-            this.gb_gerEmpresa.Controls.Add(this.txtb_codigo);
+            this.gb_gerEmpresa.Controls.Add(this.txtCodigo);
             this.gb_gerEmpresa.Controls.Add(this.btnExcluir);
             this.gb_gerEmpresa.Controls.Add(this.btnCancelar);
             this.gb_gerEmpresa.Controls.Add(this.btnSalvar);
@@ -70,13 +70,13 @@
             this.gb_gerEmpresa.TabStop = false;
             this.gb_gerEmpresa.Text = "Gerenciar Empresa";
             // 
-            // txtb_codigo
+            // txtCodigo
             // 
-            this.txtb_codigo.Location = new System.Drawing.Point(84, 18);
-            this.txtb_codigo.Name = "txtb_codigo";
-            this.txtb_codigo.Size = new System.Drawing.Size(52, 24);
-            this.txtb_codigo.TabIndex = 12;
-            this.txtb_codigo.Visible = false;
+            this.txtCodigo.Location = new System.Drawing.Point(84, 18);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(52, 24);
+            this.txtCodigo.TabIndex = 12;
+            this.txtCodigo.Visible = false;
             // 
             // btnExcluir
             // 
@@ -238,7 +238,7 @@
         private System.Windows.Forms.TextBox txtb_endereco;
         private System.Windows.Forms.MaskedTextBox txtb_telefone;
         private System.Windows.Forms.TextBox txtb_nomeEmpresa;
-        private System.Windows.Forms.TextBox txtb_codigo;
+        private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnSalvar;
