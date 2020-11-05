@@ -15,7 +15,13 @@ namespace FinanceiroDesktop
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmLogin());
+            frmLogin login = new frmLogin();
+
+            if (login.ShowDialog() == DialogResult.OK)
+            {
+                Application.Run(new frmPrincipal());
+            }
+            
         }
     }
 }

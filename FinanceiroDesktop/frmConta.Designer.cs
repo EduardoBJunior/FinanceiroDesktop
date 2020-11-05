@@ -73,6 +73,7 @@
             this.gb_CadConta.TabIndex = 1;
             this.gb_CadConta.TabStop = false;
             this.gb_CadConta.Text = "Conta";
+            this.gb_CadConta.Enter += new System.EventHandler(this.gb_CadConta_Enter);
             // 
             // cb_tipoConta
             // 

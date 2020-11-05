@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,49 @@ namespace FinanceiroDesktop
         {
             frmCadastro frm = new frmCadastro();
             frm.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (ValidarCampos())
+            {
+                UsuarioDAO objDAO = new UsuarioDAO();
+
+                int codUser = objDAO.ValidarLogin(txtEmail.Text.Trim(), txtSenha.Text.Trim());
+                if (codUser ==-1)
+                {
+                    Util.ExibirMsg(Util.TipoMsg.UsuarioNãoEcontrado);
+                }
+                else
+                {
+                    Usuario.codigoLogado = codUser;
+                    this.DialogResult = DialogResult.OK;
+                }
+            }
+            
+        }
+
+        private bool ValidarCampos()
+        {
+            bool ret = true;
+            string campos = "";
+
+            if (txtEmail.Text.Trim() == "")
+            {
+                ret = false;
+                campos += " - E-Mail \n";
+            }
+            if (txtSenha.Text.Trim() =="")
+            {
+                ret = false;
+                campos += " - Senha";
+            }
+
+            if (!ret)
+            {
+                Util.ExibirMsg(campos);
+            }
+            return ret;
         }
     }
 }

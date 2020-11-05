@@ -18,22 +18,35 @@ namespace FinanceiroDesktop
 
         private void frmConta_Load(object sender, EventArgs e)
         {
+            Util.ConfigurarGrid(DGV_contas);
             Util.EstadoBotao(Util.EstadoTela.Novo, btn_salvar, btn_Excluir);
         }
 
         private void btn_salvar_Click(object sender, EventArgs e)
         {
-            VerificarCampos();
+            if (VerificarCampos())
+            {
+
+            }
         }
 
         private void btn_cancelar_Click(object sender, EventArgs e)
         {
-
+            LimparCampos();
         }
 
         private void btn_Excluir_Click(object sender, EventArgs e)
         {
 
+        }
+        private void LimparCampos()
+        {
+            txtb_nomeBanco.Clear();
+            txtb_agencia.Clear();
+            txtb_codigo.Clear();
+            txtb_Saldo.Clear();
+            txtb_numConta.Clear();
+            cb_tipoConta.SelectedIndex = -1;
         }
 
         private bool VerificarCampos()
@@ -63,11 +76,11 @@ namespace FinanceiroDesktop
                 ret = false;
                 campos += " - Saldo.\n";
             }
-            if (cb_tipoConta.SelectedIndex == -1)
-            {
-                ret = false;
-                campos += " - Tipo Conta.";
-            }
+            //if (cb_tipoConta.SelectedIndex == -1)
+            //{
+            //    ret = false;
+            //    campos += " - Tipo Conta.";
+            //}
 
             if (!ret)
             {
@@ -75,6 +88,11 @@ namespace FinanceiroDesktop
 
             }
             return ret;
+        }
+
+        private void gb_CadConta_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

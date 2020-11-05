@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace FinanceiroDesktop
 {
-    public partial class frmLancamento : Form
+    public partial class frmConsultarMovimento : Form
     {
-        public frmLancamento()
+        public frmConsultarMovimento()
         {
             InitializeComponent();
         }

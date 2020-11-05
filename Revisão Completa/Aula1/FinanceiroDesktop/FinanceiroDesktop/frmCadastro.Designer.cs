@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.grpCad = new System.Windows.Forms.GroupBox();
+            this.btnFinalizar = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtRepSenha = new System.Windows.Forms.TextBox();
@@ -37,29 +39,51 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.btnFinalizar = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
+            this.grpCad.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // grpCad
             // 
-            this.groupBox1.Controls.Add(this.btnFinalizar);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.txtEmail);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.txtRepSenha);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.txtSenha);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.txtNome);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(360, 260);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
+            this.grpCad.Controls.Add(this.btnFinalizar);
+            this.grpCad.Controls.Add(this.label5);
+            this.grpCad.Controls.Add(this.txtEmail);
+            this.grpCad.Controls.Add(this.label3);
+            this.grpCad.Controls.Add(this.txtRepSenha);
+            this.grpCad.Controls.Add(this.label4);
+            this.grpCad.Controls.Add(this.txtSenha);
+            this.grpCad.Controls.Add(this.label2);
+            this.grpCad.Controls.Add(this.txtNome);
+            this.grpCad.Controls.Add(this.label1);
+            this.grpCad.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpCad.Location = new System.Drawing.Point(0, 0);
+            this.grpCad.Name = "grpCad";
+            this.grpCad.Size = new System.Drawing.Size(360, 260);
+            this.grpCad.TabIndex = 0;
+            this.grpCad.TabStop = false;
+            this.grpCad.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // btnFinalizar
+            // 
+            this.btnFinalizar.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnFinalizar.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFinalizar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnFinalizar.Location = new System.Drawing.Point(237, 204);
+            this.btnFinalizar.Margin = new System.Windows.Forms.Padding(0);
+            this.btnFinalizar.Name = "btnFinalizar";
+            this.btnFinalizar.Size = new System.Drawing.Size(91, 31);
+            this.btnFinalizar.TabIndex = 4;
+            this.btnFinalizar.Text = "Finalizar";
+            this.btnFinalizar.UseVisualStyleBackColor = false;
+            this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(12, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(119, 18);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Faça seu Cadastro";
             // 
             // txtEmail
             // 
@@ -125,48 +149,26 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nome :";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 9);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(119, 18);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Faça seu Cadastro";
-            // 
-            // btnFinalizar
-            // 
-            this.btnFinalizar.BackColor = System.Drawing.Color.LimeGreen;
-            this.btnFinalizar.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFinalizar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnFinalizar.Location = new System.Drawing.Point(237, 204);
-            this.btnFinalizar.Margin = new System.Windows.Forms.Padding(0);
-            this.btnFinalizar.Name = "btnFinalizar";
-            this.btnFinalizar.Size = new System.Drawing.Size(91, 31);
-            this.btnFinalizar.TabIndex = 4;
-            this.btnFinalizar.Text = "Finalizar";
-            this.btnFinalizar.UseVisualStyleBackColor = false;
-            // 
             // frmCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(362, 263);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.grpCad);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmCadastro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Financeiro : Cadastro ";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.grpCad.ResumeLayout(false);
+            this.grpCad.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox grpCad;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtRepSenha;

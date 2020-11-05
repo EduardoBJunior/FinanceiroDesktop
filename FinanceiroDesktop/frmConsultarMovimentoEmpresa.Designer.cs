@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.DGV_contas = new System.Windows.Forms.DataGridView();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -37,8 +39,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.dtp_inicial = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_contas)).BeginInit();
             this.SuspendLayout();
@@ -63,6 +63,24 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Contas Cadastradas";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Enabled = false;
+            this.textBox1.Location = new System.Drawing.Point(585, 377);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(36, 24);
+            this.textBox1.TabIndex = 13;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(519, 380);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(60, 18);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "TOTAL :";
             // 
             // DGV_contas
             // 
@@ -141,29 +159,11 @@
             this.label9.TabIndex = 0;
             this.label9.Text = "Data Inicial :";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(519, 380);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 18);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "TOTAL :";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(585, 377);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(36, 24);
-            this.textBox1.TabIndex = 13;
-            // 
             // frmConsultarMovimentoEmpresa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(651, 450);
+            this.ClientSize = new System.Drawing.Size(651, 443);
             this.Controls.Add(this.groupBox2);
             this.Name = "frmConsultarMovimentoEmpresa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

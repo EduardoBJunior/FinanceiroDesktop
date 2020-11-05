@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinanceiroDesktop", "Financ
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mensagens", "Mensagens\Mensagens.csproj", "{1C168978-ED63-48F4-8C67-87D6676A0339}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAO", "DAO\DAO.csproj", "{91AB7507-62B5-4A80-BD00-A3CF97A3A800}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{1C168978-ED63-48F4-8C67-87D6676A0339}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C168978-ED63-48F4-8C67-87D6676A0339}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C168978-ED63-48F4-8C67-87D6676A0339}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91AB7507-62B5-4A80-BD00-A3CF97A3A800}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91AB7507-62B5-4A80-BD00-A3CF97A3A800}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91AB7507-62B5-4A80-BD00-A3CF97A3A800}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91AB7507-62B5-4A80-BD00-A3CF97A3A800}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

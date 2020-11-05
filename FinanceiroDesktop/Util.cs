@@ -14,6 +14,7 @@ namespace FinanceiroDesktop
         {
             Sucesso, 
             Erro,
+            ErroExclusao,
             DadosNaoEncontrado,
             CampoObg
         }
@@ -24,25 +25,65 @@ namespace FinanceiroDesktop
             Alterar
         }
 
+        public static bool PerguntarAntesExclusao()
+        {
+            if (MessageBox.Show(Mensagens.Msg.MensagemPerguntaExcluir,Mensagens.Msg.TituloAviso,MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.Yes)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+       
+
+
+
+        }
+
+        public static void VisibilidadeColunaGrid(DataGridView grid,string coluna, bool visivel)
+        {
+            grid.Columns[coluna].Visible = visivel;
+
+        }
+
+        public static void AlterarCabecalhoColuna(DataGridView grid, string coluna, string nome)
+        {
+            grid.Columns[coluna].HeaderText = nome;
+        }
+        public static void ConfigurarGrid(DataGridView grid)
+        {
+            grid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            grid.MultiSelect = false;
+            grid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            grid.ReadOnly = false;
+        }
+
         public static void ExibirMsg(TipoMsg tipo)
         {
             switch (tipo)
             {
                 case TipoMsg.Sucesso:
                     
-                    MessageBox.Show(Mensagens.Msg.MesagemSucesso,Mensagens.Msg.TituloSucesso,MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    MessageBox.Show(Mensagens.Msg.MensagemSucesso,Mensagens.Msg.TituloSucesso,MessageBoxButtons.OK,MessageBoxIcon.Information);
                     break;
 
                 case TipoMsg.Erro:
 
-                    MessageBox.Show(Mensagens.Msg.MensagemErro,Mensagens.Msg.TituloSucesso,MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    MessageBox.Show(Mensagens.Msg.MensagemErro,Mensagens.Msg.TituloErro,MessageBoxButtons.OK,MessageBoxIcon.Error);
 
                     break;
 
                 case TipoMsg.DadosNaoEncontrado:
 
-                    MessageBox.Show(Mensagens.Msg.MessagemRegistroNaoEncontrado,Mensagens.Msg.TituloAviso,MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                    MessageBox.Show(Mensagens.Msg.MensagemRegistroNaoEncontrado,Mensagens.Msg.TituloAviso,MessageBoxButtons.OK,MessageBoxIcon.Warning);
 
+                    break;
+
+                
+
+                case TipoMsg.ErroExclusao:
+                    MessageBox.Show(Mensagens.Msg.MensagemExcluir,Mensagens.Msg.TituloErro,MessageBoxButtons.OK,MessageBoxIcon.Error);
                     break;
 
             }

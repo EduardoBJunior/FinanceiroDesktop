@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using DAO;
+
 
 namespace FinanceiroDesktop
 {
@@ -18,18 +20,22 @@ namespace FinanceiroDesktop
 
         private void frmEmpresa_Load(object sender, EventArgs e)
         {
+            Util.ConfigurarGrid(DGV_Empresas);
             Util.EstadoBotao(Util.EstadoTela.Novo, btnSalvar, btnExcluir);
-            
+            LimparCampos();
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            VerificarCampos();
+            if (VerificarCampos())
+            {
+               
+            }
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-
+            LimparCampos();
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
@@ -42,9 +48,17 @@ namespace FinanceiroDesktop
 
         }
 
+        private void LimparCampos()
+        {
+            txtCodigo.Clear();
+            txtb_nomeEmpresa.Clear();
+            txtb_telefone.Clear();
+            txtb_endereco.Clear();
+            txtb_site.Clear();
+        }
         private bool VerificarCampos()
         {
-            bool ret = false;
+            bool ret = true;
             string campos = "";
 
             //if (txtCodigo.Text.Trim() =="")

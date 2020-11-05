@@ -67,7 +67,7 @@
             // lbLinkRecSenha
             // 
             this.lbLinkRecSenha.AutoSize = true;
-            this.lbLinkRecSenha.Location = new System.Drawing.Point(174, 83);
+            this.lbLinkRecSenha.Location = new System.Drawing.Point(177, 86);
             this.lbLinkRecSenha.Name = "lbLinkRecSenha";
             this.lbLinkRecSenha.Size = new System.Drawing.Size(120, 19);
             this.lbLinkRecSenha.TabIndex = 2;

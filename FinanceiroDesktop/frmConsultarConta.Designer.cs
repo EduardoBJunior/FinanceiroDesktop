@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.cb_categoria = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btn_pesquisar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dtp_final = new System.Windows.Forms.DateTimePicker();
             this.dtp_inicio = new System.Windows.Forms.DateTimePicker();
+            this.cb_categoria = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btn_pesquisar = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -57,46 +57,7 @@
             this.groupBox1.Size = new System.Drawing.Size(662, 438);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(15, 120);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(632, 312);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // cb_categoria
-            // 
-            this.cb_categoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_categoria.FormattingEnabled = true;
-            this.cb_categoria.Location = new System.Drawing.Point(163, 36);
-            this.cb_categoria.Name = "cb_categoria";
-            this.cb_categoria.Size = new System.Drawing.Size(328, 24);
-            this.cb_categoria.TabIndex = 17;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 39);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(145, 18);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "Selecione a Categoria :";
-            // 
-            // btn_pesquisar
-            // 
-            this.btn_pesquisar.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btn_pesquisar.Font = new System.Drawing.Font("Microsoft Tai Le", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_pesquisar.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.btn_pesquisar.Location = new System.Drawing.Point(516, 30);
-            this.btn_pesquisar.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_pesquisar.Name = "btn_pesquisar";
-            this.btn_pesquisar.Size = new System.Drawing.Size(131, 60);
-            this.btn_pesquisar.TabIndex = 15;
-            this.btn_pesquisar.Text = "Pesquisar";
-            this.btn_pesquisar.UseVisualStyleBackColor = false;
+            this.groupBox1.Text = "Consultar Contas";
             // 
             // label3
             // 
@@ -131,6 +92,45 @@
             this.dtp_inicio.Name = "dtp_inicio";
             this.dtp_inicio.Size = new System.Drawing.Size(105, 24);
             this.dtp_inicio.TabIndex = 18;
+            // 
+            // cb_categoria
+            // 
+            this.cb_categoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_categoria.FormattingEnabled = true;
+            this.cb_categoria.Location = new System.Drawing.Point(163, 36);
+            this.cb_categoria.Name = "cb_categoria";
+            this.cb_categoria.Size = new System.Drawing.Size(328, 24);
+            this.cb_categoria.TabIndex = 17;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 39);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(129, 18);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Selecione a Contas :";
+            // 
+            // btn_pesquisar
+            // 
+            this.btn_pesquisar.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btn_pesquisar.Font = new System.Drawing.Font("Microsoft Tai Le", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_pesquisar.ForeColor = System.Drawing.SystemColors.InactiveBorder;
+            this.btn_pesquisar.Location = new System.Drawing.Point(516, 30);
+            this.btn_pesquisar.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_pesquisar.Name = "btn_pesquisar";
+            this.btn_pesquisar.Size = new System.Drawing.Size(131, 60);
+            this.btn_pesquisar.TabIndex = 15;
+            this.btn_pesquisar.Text = "Pesquisar";
+            this.btn_pesquisar.UseVisualStyleBackColor = false;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(15, 120);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(632, 312);
+            this.dataGridView1.TabIndex = 0;
             // 
             // frmConsultarConta
             // 

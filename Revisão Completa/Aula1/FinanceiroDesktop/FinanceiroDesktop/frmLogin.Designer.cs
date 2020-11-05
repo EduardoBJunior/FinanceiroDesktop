@@ -31,12 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtSenha = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCadastrar = new System.Windows.Forms.Button();
+            this.btnAcessar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -60,12 +60,12 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "E-mail : ";
             // 
-            // textBox1
+            // txtEmail
             // 
-            this.textBox1.Location = new System.Drawing.Point(100, 38);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(151, 24);
-            this.textBox1.TabIndex = 0;
+            this.txtEmail.Location = new System.Drawing.Point(100, 38);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(151, 24);
+            this.txtEmail.TabIndex = 0;
             // 
             // label2
             // 
@@ -76,20 +76,20 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Senha :";
             // 
-            // textBox2
+            // txtSenha
             // 
-            this.textBox2.Location = new System.Drawing.Point(100, 68);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(151, 24);
-            this.textBox2.TabIndex = 1;
+            this.txtSenha.Location = new System.Drawing.Point(100, 68);
+            this.txtSenha.Name = "txtSenha";
+            this.txtSenha.PasswordChar = '*';
+            this.txtSenha.Size = new System.Drawing.Size(151, 24);
+            this.txtSenha.TabIndex = 1;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.btnCadastrar);
+            this.groupBox1.Controls.Add(this.btnAcessar);
+            this.groupBox1.Controls.Add(this.txtEmail);
+            this.groupBox1.Controls.Add(this.txtSenha);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -100,30 +100,31 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Login";
             // 
-            // button2
+            // btnCadastrar
             // 
-            this.button2.BackColor = System.Drawing.Color.SteelBlue;
-            this.button2.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(83, 107);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(83, 24);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Cadastrar";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnCadastrar.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnCadastrar.Location = new System.Drawing.Point(83, 107);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(83, 39);
+            this.btnCadastrar.TabIndex = 2;
+            this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnCadastrar.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // btnAcessar
             // 
-            this.button1.BackColor = System.Drawing.Color.LimeGreen;
-            this.button1.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(172, 107);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(79, 24);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Entrar";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnAcessar.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnAcessar.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAcessar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnAcessar.Location = new System.Drawing.Point(172, 107);
+            this.btnAcessar.Name = "btnAcessar";
+            this.btnAcessar.Size = new System.Drawing.Size(79, 39);
+            this.btnAcessar.TabIndex = 3;
+            this.btnAcessar.Text = "Acessar";
+            this.btnAcessar.UseVisualStyleBackColor = false;
+            this.btnAcessar.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmLogin
             // 
@@ -148,12 +149,12 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCadastrar;
+        private System.Windows.Forms.Button btnAcessar;
     }
 }
 

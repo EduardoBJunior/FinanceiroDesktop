@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3738e15b21ef49dba91d5fc789a10ec2" Name="Diagram1" ZoomLevel="86">
+        <EntityTypeShape EntityType="db_financeiroModel.tb_categoria" Width="1.5" PointX="3" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_financeiroModel.tb_conta" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_financeiroModel.tb_movimento" Width="1.5" PointX="5.25" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_financeiroModel.tb_usuario" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
+        <AssociationConnector Association="db_financeiroModel.fk_tb_categoria_tb_usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="db_financeiroModel.fk_tb_movimento_tb_categoria1" ManuallyRouted="false" />
+        <AssociationConnector Association="db_financeiroModel.fk_tb_conta_tb_usuario1" ManuallyRouted="false" />
+        <AssociationConnector Association="db_financeiroModel.fk_tb_movimento_tb_conta1" ManuallyRouted="false" />
+        <AssociationConnector Association="db_financeiroModel.fk_tb_movimento_tb_usuario1" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="db_financeiroModel.tb_empresa" Width="1.5" PointX="3.125" PointY="9" />
+        <AssociationConnector Association="db_financeiroModel.fk_tb_empresa_tb_usuario1" />
+        <AssociationConnector Association="db_financeiroModel.fk_tb_movimento_tb_empresa1" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -37,7 +37,7 @@
             this.cb_Conta = new System.Windows.Forms.ComboBox();
             this.cb_Empresa = new System.Windows.Forms.ComboBox();
             this.cb_Categoria = new System.Windows.Forms.ComboBox();
-            this.txb_Valor = new System.Windows.Forms.TextBox();
+            this.txtValor = new System.Windows.Forms.TextBox();
             this.cb_tipoMovimento = new System.Windows.Forms.ComboBox();
             this.dtp_Data = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
@@ -71,7 +71,7 @@
             this.groupBox1.Controls.Add(this.cb_Conta);
             this.groupBox1.Controls.Add(this.cb_Empresa);
             this.groupBox1.Controls.Add(this.cb_Categoria);
-            this.groupBox1.Controls.Add(this.txb_Valor);
+            this.groupBox1.Controls.Add(this.txtValor);
             this.groupBox1.Controls.Add(this.cb_tipoMovimento);
             this.groupBox1.Controls.Add(this.dtp_Data);
             this.groupBox1.Controls.Add(this.label7);
@@ -91,7 +91,7 @@
             // 
             // txtb_codigo
             // 
-            this.txtb_codigo.Location = new System.Drawing.Point(69, 142);
+            this.txtb_codigo.Location = new System.Drawing.Point(23, 28);
             this.txtb_codigo.Name = "txtb_codigo";
             this.txtb_codigo.Size = new System.Drawing.Size(52, 24);
             this.txtb_codigo.TabIndex = 14;
@@ -174,12 +174,12 @@
             this.cb_Categoria.Size = new System.Drawing.Size(136, 24);
             this.cb_Categoria.TabIndex = 5;
             // 
-            // txb_Valor
+            // txtValor
             // 
-            this.txb_Valor.Location = new System.Drawing.Point(127, 86);
-            this.txb_Valor.Name = "txb_Valor";
-            this.txb_Valor.Size = new System.Drawing.Size(114, 24);
-            this.txb_Valor.TabIndex = 8;
+            this.txtValor.Location = new System.Drawing.Point(127, 86);
+            this.txtValor.Name = "txtValor";
+            this.txtValor.Size = new System.Drawing.Size(114, 24);
+            this.txtValor.TabIndex = 8;
             // 
             // cb_tipoMovimento
             // 
@@ -195,11 +195,12 @@
             // 
             // dtp_Data
             // 
-            this.dtp_Data.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_Data.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtp_Data.Location = new System.Drawing.Point(128, 25);
             this.dtp_Data.Name = "dtp_Data";
             this.dtp_Data.Size = new System.Drawing.Size(113, 24);
             this.dtp_Data.TabIndex = 4;
+            this.dtp_Data.ValueChanged += new System.EventHandler(this.dtp_Data_ValueChanged);
             // 
             // label7
             // 
@@ -332,6 +333,7 @@
             this.dtp_final.Name = "dtp_final";
             this.dtp_final.Size = new System.Drawing.Size(113, 24);
             this.dtp_final.TabIndex = 4;
+            this.dtp_final.ValueChanged += new System.EventHandler(this.dtp_final_ValueChanged);
             // 
             // label10
             // 
@@ -349,6 +351,7 @@
             this.dtp_inicial.Name = "dtp_inicial";
             this.dtp_inicial.Size = new System.Drawing.Size(113, 24);
             this.dtp_inicial.TabIndex = 4;
+            this.dtp_inicial.ValueChanged += new System.EventHandler(this.dtp_inicial_ValueChanged);
             // 
             // label9
             // 
@@ -394,7 +397,7 @@
         private System.Windows.Forms.ComboBox cb_Conta;
         private System.Windows.Forms.ComboBox cb_Empresa;
         private System.Windows.Forms.ComboBox cb_Categoria;
-        private System.Windows.Forms.TextBox txb_Valor;
+        private System.Windows.Forms.TextBox txtValor;
         private System.Windows.Forms.ComboBox cb_tipoMovimento;
         private System.Windows.Forms.Button btn_Excluir;
         private System.Windows.Forms.Button btn_cancelar;
