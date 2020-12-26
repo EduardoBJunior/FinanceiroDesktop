@@ -1,0 +1,36 @@
+﻿
+@{
+
+    Layout = "~/Views/Shared/_layout.cshtml";
+}
+
+@using (Html.BeginForm("Gravar", "Conta", FormMethod.Post))
+{
+    <input class="form-control" name="cod" value="@ViewBag.cod" />
+    <div class="form-group">
+        <label>Nome do Banco</label>
+        <input class="form-control" placeholder="Digite o nome Aqui!" name="nomeBanco" value="@ViewBag.nomeBanco">
+        <label>Numero da Conta</label>
+        <input class="form-control" placeholder="Digite o nome Aqui!" name="numConta" value="@ViewBag.numConta">
+        <label>Agencia </label>
+        <input class="form-control" placeholder="Digite o nome Aqui!" name="agencia" value="@ViewBag.agencia">
+
+        <label>Selecione o Tipo</label>
+        <select class="form-control">
+            <option value="0" @{string sel = ""; if (ViewBag.tipoConta == "0") { sel = "selected"; } else { sel = ""; } } @sel>Poupança</option>
+            <option value="1" @{ if (ViewBag.tipoConta == "1") { sel = "selected"; } else { sel = ""; } } @sel>Corrente</option>
+            
+
+        </select>
+        <label>Saldo Atual</label>
+        <input class="form-control" placeholder="Digite o nome Aqui!" name="saldo" value="@ViewBag.saldoAtual">
+
+    </div>
+
+
+
+
+    <button type="submit" name="btn" value="salvar" class="btn btn-success">Salvar</button>
+    <button type="submit" name="btn" value="excluir" class="btn btn-danger">Excluir</button>
+
+}

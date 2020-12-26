@@ -1,0 +1,76 @@
+﻿
+@{
+
+    Layout = "~/Views/Shared/_layout.cshtml";
+}
+
+
+@using (Html.BeginForm("Filtrar", "Movimento", FormMethod.Post))
+{
+    <div class="form-group">
+        <label>Data Inicial</label>
+        <input type="date" class="form-control" name="dataInivial" value="@ViewBag.dtIni">
+    </div>
+    <div class="form-group">
+        <label>Data Final</label>
+        <input type="date" class="form-control" name="dataFinal" value="@ViewBag.dtfim">
+    </div>
+    <div class="form-group">
+        <label>Tipo</label>
+        <select class="form-control" name="tipo">
+            <option value="">Selecione</option>
+            <option value="0">Entrada</option>
+            <option value="1">Saída</option>
+            <option value="2">Todos</option>
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-success">Pesquisar</button>
+
+}
+
+@if (ViewBag.Movs != null)
+{
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            Empresas Cadastradas
+        </div>
+        <div class="panel-body">
+            <div class="table-responsive">
+                <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                    <thead>
+                        <tr>
+                            <th>Data</th>
+                            <th>Tipo</th>
+                            <th>Valor</th>
+                            <th>Empresa</th>
+                            <th>Categoria</th>
+                            <th>Conta</th>
+                            <th>Observação</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in ViewBag.Movs)
+                        {
+                        <tr class="odd gradeX">
+                           
+                            <td>@item.Data</td>
+                            <td>@item.Tipo</td>
+                            <td>@item.Valor</td>
+                            <td>@item.Empresa</td>
+                            <td>@item.Categoria</td>
+                            <td>@item.Conta</td>
+                            <td>@item.Obs</td>
+
+                        </tr>
+                        }
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+}
+

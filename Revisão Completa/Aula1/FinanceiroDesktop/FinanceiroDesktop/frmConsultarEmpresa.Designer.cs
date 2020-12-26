@@ -1,6 +1,6 @@
 ﻿namespace FinanceiroDesktop
 {
-    partial class frmConsultarMovimento
+    partial class frmConsultarEmpresa
     {
         /// <summary>
         /// Required designer variable.
@@ -62,6 +62,7 @@
             this.grdMovimento.TabIndex = 0;
             this.grdMovimento.TabStop = false;
             this.grdMovimento.Text = "Consultar Movimentação";
+            
             // 
             // txtTotal
             // 
@@ -133,6 +134,7 @@
             this.btnPesquisa.TabIndex = 2;
             this.btnPesquisa.Text = "Pesquisa";
             this.btnPesquisa.UseVisualStyleBackColor = false;
+            this.btnPesquisa.Click += new System.EventHandler(this.btnPesquisa_Click);
             // 
             // cbEmpresas
             // 
@@ -151,15 +153,16 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Selecione a Empresa :";
             // 
-            // frmConsultarMovimento
+            // frmConsultarEmpresa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(607, 414);
             this.Controls.Add(this.grdMovimento);
-            this.Name = "frmConsultarMovimento";
+            this.Name = "frmConsultarEmpresa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consutar Movimento por Empresa";
+            this.Load += new System.EventHandler(this.frmConsultarEmpresa_Load);
             this.grdMovimento.ResumeLayout(false);
             this.grdMovimento.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdMovimentacao)).EndInit();

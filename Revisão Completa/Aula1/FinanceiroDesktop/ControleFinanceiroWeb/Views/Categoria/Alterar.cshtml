@@ -1,0 +1,19 @@
+﻿
+@{
+
+    Layout = "~/Views/Shared/_layout.cshtml";
+}
+
+@using (Html.BeginForm("Gravar", "Categoria", FormMethod.Post))
+{
+
+    <input class="form-control" name="cod" value="@ViewBag.cod" />
+    <div class="form-group">
+        <label>Novo Nome da Categoria</label>
+        <input class="form-control" placeholder="Digite o nome Aqui!" name="nome" value="@ViewBag.nome">
+    </div>
+
+    <button type="submit" name="btn" value="salvar" class="btn btn-success">Salvar</button>
+    <button type="submit" name="btn" value="excluir" class="btn btn-danger">Excluir</button>
+
+}

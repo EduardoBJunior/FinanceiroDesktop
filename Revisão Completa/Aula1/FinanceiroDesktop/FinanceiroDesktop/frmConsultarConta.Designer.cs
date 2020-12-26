@@ -127,29 +127,30 @@
             this.btnPesquisa.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnPesquisa.Font = new System.Drawing.Font("Microsoft Tai Le", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPesquisa.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnPesquisa.Location = new System.Drawing.Point(452, 34);
+            this.btnPesquisa.Location = new System.Drawing.Point(473, 51);
             this.btnPesquisa.Name = "btnPesquisa";
             this.btnPesquisa.Size = new System.Drawing.Size(96, 41);
             this.btnPesquisa.TabIndex = 2;
             this.btnPesquisa.Text = "Pesquisa";
             this.btnPesquisa.UseVisualStyleBackColor = false;
+            this.btnPesquisa.Click += new System.EventHandler(this.btnPesquisa_Click);
             // 
             // cbContas
             // 
             this.cbContas.FormattingEnabled = true;
-            this.cbContas.Location = new System.Drawing.Point(150, 34);
+            this.cbContas.Location = new System.Drawing.Point(150, 23);
             this.cbContas.Name = "cbContas";
-            this.cbContas.Size = new System.Drawing.Size(290, 24);
+            this.cbContas.Size = new System.Drawing.Size(429, 24);
             this.cbContas.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(11, 37);
+            this.label1.Location = new System.Drawing.Point(11, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(138, 18);
+            this.label1.Size = new System.Drawing.Size(123, 18);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Selecione a Empresa :";
+            this.label1.Text = "Selecione a Conta :";
             // 
             // frmConsultarConta
             // 
@@ -160,6 +161,7 @@
             this.Name = "frmConsultarConta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consultar Contas Cadastradas";
+            this.Load += new System.EventHandler(this.frmConsultarConta_Load);
             this.grdMovimento.ResumeLayout(false);
             this.grdMovimento.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdContas)).EndInit();

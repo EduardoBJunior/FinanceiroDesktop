@@ -22,6 +22,10 @@ namespace Mensagens
         /// </summary>
         public static string MensagemErroExclusao = "Não Foi possivel Excluir o registro pois esta em uso!";
         /// <summary>
+        /// Senha Diferente do Digitado
+        /// </summary>
+        public static string MensagemSenhaNaoConfere = "O campo Repetir senha não condfere com o valor digitado no campos senha";
+        /// <summary>
         /// Não foi encontrado nenhum registro
         /// </summary>
         public static string MesagemRegistroNaoEncontrado = "Não foi encontrado nenhum registro";

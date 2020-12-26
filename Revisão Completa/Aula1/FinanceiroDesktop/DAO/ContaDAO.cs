@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -51,7 +52,6 @@ namespace DAO
             }
         }
         //============================================================================
-
         public List<tb_conta> ConsultarContaProc(int codUserLogado)
         {
             MySqlConnection con = new MySqlConnection(strCon);
@@ -107,7 +107,7 @@ namespace DAO
             return lstRetorno;
 
         }
-
+        //============================================================================
         public List<ContaVO> ConsultarContaVO(int codUserLogado) {
             
             banco2 objbanco = new banco2();
@@ -134,10 +134,8 @@ namespace DAO
 
             return lstRetorno;
         }
-        
         //============================================================================
-        
-         public void AlterarContaProc(tb_conta ObjContaAtualizada)
+        public void AlterarContaProc(tb_conta ObjContaAtualizada)
         {
             MySqlConnection con = new MySqlConnection(strCon);
             MySqlCommand cmd = new MySqlCommand();
@@ -174,8 +172,6 @@ namespace DAO
         }
 
         //============================================================================
-
-        //============================================================================
         public void InserirConta(tb_conta objConta)
         {
             //Cria  o obejeto do banco 
@@ -204,6 +200,38 @@ namespace DAO
             return lstRetorno;
         }
         //=========================================================================
+        public List<ContaVO>PesquisarConta(int codUser, DateTime dataInicial, DateTime dataFinal, string NomeConta )
+        {
+            banco2 objBanco = new banco2();
+
+            List<ContaVO> lstRetorno = new List<ContaVO>();
+            List<tb_conta> lstConsulta = new List<tb_conta>();
+
+            lstConsulta = objBanco.tb_conta.Where(co => co.id_usuario == codUser && co.nome_banco == NomeConta && co.data_cadastro >= dataInicial && co.data_cadastro <= dataFinal ).ToList();
+
+            for (int i = 0; i < lstConsulta.Count; i++)
+            {
+                ContaVO objvo = new ContaVO();
+
+                objvo.NomeBanco = lstConsulta[i].nome_banco;
+                objvo.Agencia = lstConsulta[i].agencia_conta;
+                objvo.NumeroConta = lstConsulta[i].numero_conta;
+                objvo.Saldo = lstConsulta[i].saldo_conta.ToString();
+                objvo.Tipo = lstConsulta[i].tipo_conta == 0 ? "Poupança" : "Corrente";
+                
+                objvo.objConta = lstConsulta[i];
+
+                lstRetorno.Add(objvo);
+
+            }
+
+            return lstRetorno;
+
+        }
+        //=========================================================================
+        //public List<MovimentoVO>PesquisarMovimentoConta(int codUser, DateTime dataInicial, DateTime dataFinal, )
+
+        //=========================================================
 
         public void AlterarConta(tb_conta ObjContaAtualizada)
         {

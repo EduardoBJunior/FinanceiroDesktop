@@ -74,6 +74,7 @@ namespace DAO
 
             // No meu obj banco add an tb categoria o obj do parametro de entrada 
             objbanco.AddTotb_categoria(objCategoria);
+           
 
             // Salava no BD
             objbanco.SaveChanges();
@@ -150,6 +151,7 @@ namespace DAO
             return lstRetorno;
         }
         //============================================================================
+        
         public void AlterarCategoriaProc(tb_categoria ObjCategoriaAtualizada)
         {
             MySqlConnection con = new MySqlConnection(strCon);

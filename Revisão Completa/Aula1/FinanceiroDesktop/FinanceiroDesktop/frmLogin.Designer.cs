@@ -66,6 +66,7 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(151, 24);
             this.txtEmail.TabIndex = 0;
+            this.txtEmail.Text = "eduardo";
             // 
             // label2
             // 
@@ -83,6 +84,7 @@
             this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(151, 24);
             this.txtSenha.TabIndex = 1;
+            this.txtSenha.Text = "1234";
             // 
             // groupBox1
             // 

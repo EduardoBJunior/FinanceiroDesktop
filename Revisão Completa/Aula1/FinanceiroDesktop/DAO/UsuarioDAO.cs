@@ -25,7 +25,7 @@ namespace DAO
 
             //verificar se encontrou 
 
-            if (objUser ==null)
+            if (objUser == null)
             {
                 return -1;
             }

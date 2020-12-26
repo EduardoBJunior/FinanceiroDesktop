@@ -8,6 +8,8 @@ using System.Transactions;
 using System.Data;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Org.BouncyCastle.Asn1.IsisMtt.X509;
+using System.ComponentModel;
+using DAO;
 
 namespace DAO
 {
@@ -263,6 +265,135 @@ namespace DAO
             return lstRtorno;
         }
 
+
+        public List<MovimentoVO> ConsultarMovimentoConta(int codUser, DateTime dtInicial, DateTime dtFinal, int idConta) 
+        {
+
+            banco2 objBanco = new banco2();
+
+            List<MovimentoVO> lstRetorno = new List<MovimentoVO>();
+            List<tb_movimento> lstConsulta = new List<tb_movimento>();
+
+
+
+            lstConsulta = objBanco.tb_movimento
+           .Include("tb_conta")
+           .Include("tb_categoria")
+           .Include("tb_empresa")
+           .Where(mov => mov.id_usuario == codUser
+                  && mov.data_movimento >= dtInicial
+                  && mov.data_movimento <= dtFinal
+                  && mov.tb_conta.id_conta ==idConta).ToList();
+
+                       
+
+            for (int i = 0; i < lstConsulta.Count; i++)
+            {
+                //cria o obj
+                MovimentoVO objvo = new MovimentoVO();
+
+                //preenche as propriedades customizadas
+                objvo.Conta = lstConsulta[i].tb_conta.nome_banco +  " / Numero : " + lstConsulta[i].tb_conta.numero_conta;
+                objvo.Categoria = lstConsulta[i].tb_categoria.nome_categoria;
+                objvo.Empresa = lstConsulta[i].tb_empresa.nome_empresa;
+                
+                objvo.Data = lstConsulta[i].data_movimento.ToShortDateString();
+                objvo.Valor = lstConsulta[i].valor_movimento;
+                objvo.Tipo = lstConsulta[i].tipo_movimento == 0 ? "Entrada" : "Saída";
+
+                
+
+                //Adiciona na lista de retorno
+                lstRetorno.Add(objvo);
+            }
+            return lstRetorno;
+        }
+
+        public List<MovimentoVO> ConsultarMovimentoCategoria(int codUser, DateTime dtInicial, DateTime dtFinal, int idCategoria)
+        {
+
+            banco2 objBanco = new banco2();
+
+            List<MovimentoVO> lstRetorno = new List<MovimentoVO>();
+            List<tb_movimento> lstConsulta = new List<tb_movimento>();
+
+
+
+            lstConsulta = objBanco.tb_movimento
+           .Include("tb_conta")
+           .Include("tb_categoria")
+           .Include("tb_empresa")
+           .Where(mov => mov.id_usuario == codUser
+                  && mov.data_movimento >= dtInicial
+                  && mov.data_movimento <= dtFinal
+                  && mov.tb_categoria.id_categoria == idCategoria).ToList();
+
+
+
+            for (int i = 0; i < lstConsulta.Count; i++)
+            {
+                //cria o obj
+                MovimentoVO objvo = new MovimentoVO();
+
+                //preenche as propriedades customizadas
+                objvo.Conta = lstConsulta[i].tb_conta.nome_banco + " / Numero : " + lstConsulta[i].tb_conta.numero_conta;
+                objvo.Categoria = lstConsulta[i].tb_categoria.nome_categoria;
+                objvo.Empresa = lstConsulta[i].tb_empresa.nome_empresa;
+
+                objvo.Data = lstConsulta[i].data_movimento.ToShortDateString();
+                objvo.Valor = lstConsulta[i].valor_movimento;
+                objvo.Tipo = lstConsulta[i].tipo_movimento == 0 ? "Entrada" : "Saída";
+
+
+
+                //Adiciona na lista de retorno
+                lstRetorno.Add(objvo);
+            }
+            return lstRetorno;
+        }
+
+        public List<MovimentoVO> ConsultarMovimentoEmpresa(int codUser, DateTime dtInicial, DateTime dtFinal, int idEmpresa)
+        {
+
+            banco2 objBanco = new banco2();
+
+            List<MovimentoVO> lstRetorno = new List<MovimentoVO>();
+            List<tb_movimento> lstConsulta = new List<tb_movimento>();
+
+
+
+            lstConsulta = objBanco.tb_movimento
+           .Include("tb_conta")
+           .Include("tb_categoria")
+           .Include("tb_empresa")
+           .Where(mov => mov.id_usuario == codUser
+                  && mov.data_movimento >= dtInicial
+                  && mov.data_movimento <= dtFinal
+                  && mov.tb_categoria.id_categoria == idEmpresa).ToList();
+
+
+
+            for (int i = 0; i < lstConsulta.Count; i++)
+            {
+                //cria o obj
+                MovimentoVO objvo = new MovimentoVO();
+
+                //preenche as propriedades customizadas
+                objvo.Conta = lstConsulta[i].tb_conta.nome_banco + " / Numero : " + lstConsulta[i].tb_conta.numero_conta;
+                objvo.Categoria = lstConsulta[i].tb_categoria.nome_categoria;
+                objvo.Empresa = lstConsulta[i].tb_empresa.nome_empresa;
+
+                objvo.Data = lstConsulta[i].data_movimento.ToShortDateString();
+                objvo.Valor = lstConsulta[i].valor_movimento;
+                objvo.Tipo = lstConsulta[i].tipo_movimento == 0 ? "Entrada" : "Saída";
+
+
+
+                //Adiciona na lista de retorno
+                lstRetorno.Add(objvo);
+            }
+            return lstRetorno;
+        }
 
     }
 }

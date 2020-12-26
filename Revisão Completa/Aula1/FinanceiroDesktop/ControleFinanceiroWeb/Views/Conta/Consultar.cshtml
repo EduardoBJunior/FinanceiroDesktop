@@ -1,0 +1,50 @@
+﻿
+@{
+
+    Layout = "~/Views/Shared/_layout.cshtml";
+}
+
+<!-- Advanced Tables -->
+<div class="panel panel-default">
+    <div class="panel-heading">
+
+    </div>
+    <div class="panel-body">
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                <thead>
+                    <tr>
+                        <th>Nome do Banco</th>
+                        <th>Numero Conta</th>
+                        <th>Agencia</th>
+                        <th>Tipo</th>
+                        <th>Saldo</th>
+                        <th>Ação</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in ViewBag.LstConta)
+                    {
+                        string tipo_nome = item.tipo_conta == 0 ? "Poupança" : "Conta-Corrente";
+
+                        <tr class="odd gradeX">
+                            <td>@item.nome_banco</td>
+                            <td>@item.numero_conta</td>
+                            <td>@item.agencia_conta</td>
+                            <td>@tipo_nome</td>
+                            <td>@item.saldo_conta</td>
+
+                            <td><a href="/Conta/Alterar?cod=@item.id_conta&nomeBanco=@item.nome_banco&numConta=@item.numero_conta&agencia=@item.agencia_conta&tipoConta=@item.tipo_conta&saldoAtual=@item.saldo_conta" class="btn btn-warning">Alterar</a></td>
+
+
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>
+<!--End Advanced Tables -->

@@ -79,7 +79,6 @@
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Size = new System.Drawing.Size(44, 24);
             this.txtTotal.TabIndex = 19;
-            this.txtTotal.Visible = false;
             // 
             // grdCategoria
             // 
@@ -153,6 +152,7 @@
             this.btnPesquisar.TabIndex = 12;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = false;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // frmConsultarCategoria
             // 
@@ -163,6 +163,7 @@
             this.Name = "frmConsultarCategoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmConsultarCategoria";
+            this.Load += new System.EventHandler(this.frmConsultarCategoria_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdCategoria)).EndInit();

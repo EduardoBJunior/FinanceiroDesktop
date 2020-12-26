@@ -48,7 +48,7 @@ namespace FinanceiroDesktop
 
         private void empresaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmConsultarMovimento frm = new frmConsultarMovimento();
+            frmConsultarEmpresa frm = new frmConsultarEmpresa();
             frm.ShowDialog();
         }
 

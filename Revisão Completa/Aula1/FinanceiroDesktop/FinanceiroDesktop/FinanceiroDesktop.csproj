@@ -70,11 +70,11 @@
     <Compile Include="frmConsultarConta.Designer.cs">
       <DependentUpon>frmConsultarConta.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmConsultarMovimento.cs">
+    <Compile Include="frmConsultarEmpresa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmConsultarMovimento.Designer.cs">
-      <DependentUpon>frmConsultarMovimento.cs</DependentUpon>
+    <Compile Include="frmConsultarEmpresa.Designer.cs">
+      <DependentUpon>frmConsultarEmpresa.cs</DependentUpon>
     </Compile>
     <Compile Include="frmConta.cs">
       <SubType>Form</SubType>
@@ -122,8 +122,8 @@
     <EmbeddedResource Include="frmConsultarConta.resx">
       <DependentUpon>frmConsultarConta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmConsultarMovimento.resx">
-      <DependentUpon>frmConsultarMovimento.cs</DependentUpon>
+    <EmbeddedResource Include="frmConsultarEmpresa.resx">
+      <DependentUpon>frmConsultarEmpresa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmConta.resx">
       <DependentUpon>frmConta.cs</DependentUpon>

@@ -1,0 +1,45 @@
+﻿
+@{
+
+    Layout = "~/Views/Shared/_layout.cshtml";
+}
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        Empresas Cadastradas
+    </div>
+    <div class="panel-body">
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                <thead>
+                    <tr>
+                        <th>Nome da Empresa</th>
+                        <th>Telefone da Empresa</th>
+                        <th>Endereço Empresa</th>
+                        <th>Site Empresa</th>
+                        <th>Ação</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in ViewBag.LstEmpresas)
+                    {
+                    <tr class="odd gradeX">
+                        <td>@item.nome_empresa</td>
+                        <td>@item.tel_empresa</td>
+                        <td>@item.endereco_empresa</td>
+                        <td>@item.site_empresa</td>
+
+
+                        <td><a href="~/Empresa/Alterar?cod=@item.id_empresa&nome=@item.nome_empresa&tel=@item.tel_empresa&end=@item.endereco_empresa&sit=@item.site_empresa" class="btn btn-warning">Alterar</a></td>
+
+                    </tr>
+                    }
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>
+
